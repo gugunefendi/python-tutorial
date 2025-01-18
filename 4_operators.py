@@ -27,10 +27,18 @@ print( score )
 
 # Exponentiation
 # **
-
+exponentiation = 2**3 # it same with 2 * 2 = 4 * 2 = 8 
+print( exponentiation )
 
 # Positive, negative, bitwise NOT
 # +x, -x, ~x
+number = 5
+positive_number = +number # 5
+negative_number = -number # -5
+bitwise_not = ~number # -6
+print( positive_number )
+print( negative_number )
+print( bitwise_not )
 
 
 # Multiplication, matrix multiplication, division, floor division, remainder
