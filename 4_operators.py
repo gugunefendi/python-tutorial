@@ -4,6 +4,21 @@
 # [ expressions... ], { key: value... }
 # { expressions }
 
+# binding expression
+a = ( 1 + 2 ) * 3 
+print( a )
+
+# list display
+numbers = [ 10, 12, 15, 18 ]
+print( numbers )
+
+# dictionary display
+user = { 'name': 'Gunawan' } # key: value
+print( user[ 'name' ] )
+
+# set display
+score = { 23, 87, 99 }
+print( score )
 
 
 # await expression
