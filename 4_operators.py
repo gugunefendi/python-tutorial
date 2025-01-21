@@ -161,10 +161,16 @@ print( not isRegistered )
 
 # Boolean AND
 # and
-
+man = True
+woman = False
+print( man, woman )
 
 # Boolean OR
 # or
+software_engineer = True
+hardware_engineer = False
+position = software_engineer or hardware_engineer
+print( position ) # output true because software_engineer is true
 
 
 # Conditional expression
