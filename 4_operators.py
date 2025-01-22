@@ -196,9 +196,36 @@ else:
 
 
 # lambda expression
-# lambda
+# lambda expression is anonym function or without name and can be write in single line
+# usually use to simple operation
+
+# syntax
+# lambda argument: expression
+
+# example
+add = lambda x, y: x + y
+print(add(12, 12)) 
+
+# lambda with function map and filter
+numbers = [1, 2, 3, 4]
+squared = list(map(lambda x: x**2, numbers))
+print(squared)
+
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers)
 
 
 # Assignment Expression
 # :=
+# assignment expression or walrus operation use to assignment value to variable as part from expression
+# this fitur introduced in python 3.8
+# syntax: variable := expression
 
+# sample reduce repitition
+if (n := len('Python')) > 5:
+    print(f'Panjang string lebih dari 5: {n}')
+
+# use in loop
+fruits = ['apple', 'banana', 'cherry']
+while (item := fruits.pop(0)) != 'cherry':
+    print(f'Mengambil item: {item}')
