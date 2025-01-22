@@ -174,7 +174,25 @@ print( position ) # output true because software_engineer is true
 
 
 # Conditional expression
-# if - else
+#if - else
+inputName = str(input('Please enter your name: '))
+if inputName == 'Christiano Ronaldo':
+    print('You are amazing!')
+else:
+    print(f'Hello {inputName}') # concatenation string recommended use f string for python 3.6+
+
+
+# if - elif - else
+inputNumber = int(input('Please enter an integer: '))
+if inputNumber < 0:
+    inputNumber = 0
+    print( 'Negative change to zero' )
+elif inputNumber == 0:
+    print( 'Zero' )
+elif inputNumber == 1:
+    print( 'Single' )
+else:
+    print( 'More' )
 
 
 # lambda expression
