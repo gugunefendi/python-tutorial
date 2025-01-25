@@ -49,3 +49,42 @@ print(word[-2:])  # output on; characters from the second-last (included) to the
 # count length of string
 randomtext = 'asdanfkfhiue[[wf*&52sdnc.znvlksaghliufdag'
 print(len(randomtext))
+
+# string method
+print( str.capitalize( "hello WOrLd" ) ) # capitalize
+greeting = 'Good Morning'
+print( greeting.count( 'o' )) # count
+print( greeting.find( 'd' ) ) # find
+print( greeting.index( 'r' ) ) # like find but return error if substring not found
+# space
+print( " ".isspace() ) # true
+print( "\t\t".isspace() ) # true because all character is tab
+print( "\n".isspace() ) # true because all character is new line
+print( "  a ".isspace() ) # false because have character 'a'
+print( "".isspace() ) # false
+# UPPER
+print( "banana".isupper() ) # false
+print( "BANANA".isupper() ) # true
+print( "banANa".isupper() ) # false
+# join
+# str.join(iterable); join string in iterable
+fruitlists = ['apple', 'banana', 'mango']
+print( " ".join(fruitlists) )
+# a type error will be raised if there are any non string values in iterable
+dataSample = ['apple', 20, 'banana'] 
+# print( " ".join(dataSample) ) # raised type error because there are any int, all value must string
+# solution, change int to string
+print( " ".join( map( str, dataSample ) ))
+
+# string replace
+# change all substring
+dataSampleTwo = "Hello world, world is beautiful"
+result = dataSampleTwo.replace("world", "Python") # output: Hello Python, Python is beautiful
+print(result)
+
+dataSampleThree = "apple apple apple"
+result = dataSampleThree.replace("apple", "mango", 2) # if count is given, only the first count occurences are replaced.
+print(result) # output: mango mango apple
+
+dataSampleFour = 'hello world'
+print( dataSampleFour.split(" "))
