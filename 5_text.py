@@ -88,3 +88,23 @@ print(result) # output: mango mango apple
 
 dataSampleFour = 'hello world'
 print( dataSampleFour.split(" "))
+
+# f string
+# with f string we can insert expression with placed inside {}
+# sample
+employee_name   = 'Gunawan'
+employee_age    = 33
+# with f string we are no need add '+' or format() for concatenation strings
+print(f"my name {employee_name} and I am {employee_age} years old")
+
+employee_salary = 50000000
+employee_tax    = 5000000
+print(f"Your salary: {employee_salary} and tax {employee_tax}. Salary neet { employee_salary - employee_tax }")
+
+# use method
+print(f"Employee name: {employee_name.upper()}")
+
+# use date
+from datetime import datetime
+date_now = datetime.now()
+print(f"Now is: { date_now:%d-%m-%Y %H:%M:%S }")
