@@ -16,3 +16,26 @@ rgba = rgb
 print( id(rgb) == id(rgba) ) # output True
 rgba.append("alph")
 print(rgb) # output red, green, blue, alph
+
+# slicing element in list
+letters = ['a', 'b', 'c', 'd', 'e', 'f']
+print(letters) # output [ a b c d e f ]
+# slicing 2 - 5
+letters[2:5] = ['C', 'D', 'E']
+print(letters) # output [ a b C D E f ]
+# remove element in list
+letters[2:5] = []
+print(letters) # output [ a b f ]
+# clear all element by replacing all the element with an empty list
+letters[:] = []
+print(letters) # output []
+
+# length all list
+letters_second = ['a', 'b', 'c', 'd']
+print(len(letters_second)) # output 4
+
+# nest list
+fruits = ['apple', 'banana', 'grape']
+vegetables = ['carrot', 'tomato', 'pumpkin']
+fruit_and_vegetables = [fruits, vegetables]
+print(fruit_and_vegetables) # output [['apple', 'banana', 'grape'], ['carrot', 'tomato', 'pumpkin']]
