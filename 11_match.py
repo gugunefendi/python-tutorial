@@ -25,6 +25,7 @@ def check_username(username):
 username = check_username("Nada")
 print(username)
 
+# pattern matching
 # point is an (x, y) tuple
 def match_point(point):
     match point:
@@ -43,3 +44,38 @@ match_point((0, 0))  # Output: Origin
 match_point((0, 5))  # Output: Y=5
 match_point((3, 0))  # Output: X=3
 match_point((3, 4))  # Output: X=3, Y=4
+
+# pattern matching with class
+# we can match object created from a class
+
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+def where_is(point):
+    match point:
+        case Point(x = 0, y = 0):
+            print("Origin")
+        case Point(x = 0, y = y):
+            print(f"Y = {y}")
+        case Point(x = x, y = 0):
+            print(f"X = {x}")
+        case Point():
+            print("Somewhere else")
+        case _:
+            print("Not a point")
+
+test_point = [
+    Point(0, 0),
+    Point(0, 5),
+    Point(4, 0),
+    Point(3, 7),
+    Point(0, 0),
+    "Not a point"
+]
+
+for point in test_point:
+    print(f"Testing with: {point}")
+    where_is(point)
+    print("-" * 20)
